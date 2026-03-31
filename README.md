@@ -13,7 +13,7 @@
 - 터미널 : xterm-256color
 - Docker 버전 : Docker version 28.5.2, build ecc6942
 - Git 버전 : git version 2.53.0
-<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/3c58d756-6166-488b-a8fd-f4c49f68e0ee" />
+<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/f81a1771-2b19-448a-8a62-93c042a6d177" />
 
 # 수행항목 체크리스트
 [] 터미널
