@@ -12,7 +12,8 @@
 - 터미널 : xterm-256color ← 명령어 : echo $TERM
 - Docker 버전 : Docker version 28.5.2, build ecc6942 ← 명령어 : docker --version
 - Git 버전 : git version 2.53.0 ← 명령어 : --version
-<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/f81a1771-2b19-448a-8a62-93c042a6d177" />
+<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/788f0789-0fed-44b9-a972-a901a54ae0b0" />
+
 
 # 수행항목 체크리스트
 [x] 터미널 조작로그
