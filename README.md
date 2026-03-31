@@ -7,11 +7,11 @@
  - Git과 GitHub의 역할 차이(로컬 버전관리 vs 원격 협업 플랫폼)를 설명할 수 있다.
 
 # 실행 환경
-- OS : macOS 15.7.4 (24G517) ← 명령어 : system_profiler SPSoftwareDataType
-- 쉘 : /bin/zsh ← 명령어 : echo $SHELL
-- 터미널 : xterm-256color ← 명령어 : echo $TERM
-- Docker 버전 : Docker version 28.5.2, build ecc6942 ← 명령어 : docker --version
-- Git 버전 : git version 2.53.0 ← 명령어 : --version
+- OS : macOS 15.7.4 (24G517)
+- 쉘 : /bin/zsh
+- 터미널 : xterm-256color
+- Docker 버전 : Docker version 28.5.2, build ecc6942
+- Git 버전 : git version 2.53.0
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/788f0789-0fed-44b9-a972-a901a54ae0b0" />
 
 
@@ -21,10 +21,7 @@
 <img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/a77f6866-c8b8-4d12-bcb9-a7f82811dbaf" />
 <img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/dc4aa6d0-9d55-4748-8c90-31ba5520ea87" />
 <img width="1394" height="1246" alt="image" src="https://github.com/user-attachments/assets/74c8702f-c4bd-4a89-9a14-b548caf9e18b" />
-
-
-
-<img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/43d9438a-2468-4a0f-8841-3516ab2dc998" />
+<img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/b45ed1b8-5dc8-4d7e-9653-c0ec9b20ba6f" />
 
 [x] 권한 확인 및 변경
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/e16d8f0b-210b-4e41-8241-6af175faa46c" />
@@ -67,11 +64,6 @@
 
  # 요구사항
 1. 
-  - GitHub Repository 링크로 제출한다.
-  - 기술 문서(README.md 등)는 아래 내용을 반드시 포함한다.
-    - 모든 수행 결과는 “기술 문서(README.md 등)”에서 확인 가능해야 한다.
-    - 프로젝트 개요(미션 목표 요약)
-    - 실행 환경(OS/쉘/터미널, Docker 버전, Git 버전)
     - 수행 항목 체크리스트(터미널/권한/Docker/Dockerfile/포트/마운트/볼륨/Git/GitHub)
     - 검증 방법(어떤 명령으로 무엇을 확인했는지) + 결과 위치/증거 링크
   - 기술 문서 내 명령/출력은 코드블록으로 정리한다.
