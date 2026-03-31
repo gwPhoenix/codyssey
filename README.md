@@ -25,12 +25,9 @@
 
 [x] 권한 확인 및 변경
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/0c214b5f-b82c-4048-a6e1-e4c1a11358c2" />
+[] Docker 운영/검증
 
 
-
-
-
-[] Docker
 [] Dockerfile
 [] 포트
 [] 볼륨
