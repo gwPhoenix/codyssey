@@ -24,7 +24,8 @@
 <img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/b45ed1b8-5dc8-4d7e-9653-c0ec9b20ba6f" />
 
 [x] 권한 확인 및 변경
-<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/e16d8f0b-210b-4e41-8241-6af175faa46c" />
+<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/0c214b5f-b82c-4048-a6e1-e4c1a11358c2" />
+
 
 
 
