@@ -24,7 +24,19 @@
 [] Git
 [] GitHub
 
-# 
+# 검증방법 (어떤 명령으로 무엇을 확인했는지) + 결과위치 링크
+# 트러블 슈팅 2건 이상 (문제 → 원인 가설 → 확인 → 해결/대안)
+
+# 터미널 조작로그
+# Docker 운영/검증 로그
+- docker --version, docker info 등 설치·점검 결과
+- docker images, docker ps -a, docker logs, docker stats 등 운영 명령 실행 흔적
+# Dockerfile 기반 웹서버 컨테이너
+- 웹 서버 소스코드(예: app/ 또는 src/)
+- Dockerfile
+- 빌드/실행 명령 및 결과 로그(터미널 스크린샷 가능)
+- 포트 매핑 접속 성공 증거(스크린샷 또는 로그)
+
 
 
 
