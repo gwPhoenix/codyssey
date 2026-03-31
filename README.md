@@ -28,6 +28,7 @@
 [x] Docker 운영/검증
 <img width="1394" height="2870" alt="image" src="https://github.com/user-attachments/assets/e4831d07-5c1a-450c-aaef-bfd3421a7dcc" />
 <img width="1394" height="686" alt="image" src="https://github.com/user-attachments/assets/ce0147c2-8567-4aa5-8648-d0ea16434b2b" />
+<img width="1394" height="658" alt="image" src="https://github.com/user-attachments/assets/6d737afa-c51f-4a9a-a5d3-719aaa741528" />
 
 
 [] Dockerfile
@@ -38,10 +39,13 @@
 
 # 트러블 슈팅 2건 이상 (문제 → 원인 가설 → 확인 → 해결/대안)
 - 터미널 조작시, 파일이 상위 폴더로 이동되지 않는 문제 
-☞ 가설 : 현재 위치가 최상위라서 더이상 이동할수 없음
-☞ 확인 : 최상위 폴더는 아니었고, 상위폴더가 유저라서 권한이 없음.
-☞ 해결 : 하위폴더로는 해당 명령어로 정상 이동됨 확인
-
+  ☞ 가설 : 현재 위치가 최상위라서 더이상 이동할수 없음
+  ☞ 확인 : 최상위 폴더는 아니었고, 상위폴더가 유저라서 권한이 없음.
+  ☞ 해결 : 하위폴더로는 해당 명령어로 정상 이동됨 확인
+- docker Container 실행시, 로그 확인되지 않는 문제
+  ☞ 가설 : 로그 출력할 이벤트가 발생하지 않음
+  ☞ 확인 : Sleep 명령어 사용으로, 쉬는 중이므로 로그출력되지 않는 것이 정상
+  ☞ 해결 : 정상 상황이므로 해결 불필요
 
 # Dockerfile 기반 웹서버 컨테이너
 - 웹 서버 소스코드(예: app/ 또는 src/)
