@@ -27,6 +27,7 @@
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/0c214b5f-b82c-4048-a6e1-e4c1a11358c2" />
 [x] Docker 운영/검증
 <img width="1394" height="2870" alt="image" src="https://github.com/user-attachments/assets/e4831d07-5c1a-450c-aaef-bfd3421a7dcc" />
+<img width="1394" height="686" alt="image" src="https://github.com/user-attachments/assets/ce0147c2-8567-4aa5-8648-d0ea16434b2b" />
 
 
 [] Dockerfile
@@ -42,9 +43,6 @@
 ☞ 해결 : 하위폴더로는 해당 명령어로 정상 이동됨 확인
 
 
-# Docker 운영/검증 로그
-- docker --version, docker info 등 설치·점검 결과
-- docker images, docker ps -a, docker logs, docker stats 등 운영 명령 실행 흔적
 # Dockerfile 기반 웹서버 컨테이너
 - 웹 서버 소스코드(예: app/ 또는 src/)
 - Dockerfile
