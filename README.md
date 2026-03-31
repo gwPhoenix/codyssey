@@ -7,11 +7,11 @@
  - Git과 GitHub의 역할 차이(로컬 버전관리 vs 원격 협업 플랫폼)를 설명할 수 있다.
 
 # 실행 환경
-- OS : macOS 15.7.4 (24G517)
-- 쉘 : /bin/zsh
-- 터미널 : xterm-256color
-- Docker 버전 : Docker version 28.5.2, build ecc6942
-- Git 버전 : git version 2.53.0
+- OS : macOS 15.7.4 (24G517) ← 명령어 : system_profiler SPSoftwareDataType
+- 쉘 : /bin/zsh ← 명령어 : echo $SHELL
+- 터미널 : xterm-256color ← 명령어 : echo $TERM
+- Docker 버전 : Docker version 28.5.2, build ecc6942 ← 명령어 : docker --version
+- Git 버전 : git version 2.53.0 ← 명령어 : --version
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/f81a1771-2b19-448a-8a62-93c042a6d177" />
 
 # 수행항목 체크리스트
