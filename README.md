@@ -22,9 +22,11 @@
 <img width="1394" height="1246" alt="image" src="https://github.com/user-attachments/assets/8a71f1a8-dbf8-454a-a6ef-f56efd077934" />
 <img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/43d9438a-2468-4a0f-8841-3516ab2dc998" />
 
+[ x ] 권한 확인 및 변경
 
 
-[] 권한
+
+
 [] Docker
 [] Dockerfile
 [] 포트
