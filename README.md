@@ -9,10 +9,10 @@
 
 # 실행 환경
 - OS : macOS 15.7.4 (24G517)
-- 쉘 :
-- 터미널 :
-- Docker 버전 :
-- Git 버전 :
+- 쉘 : /bin/zsh
+- 터미널 : xterm-256color
+- Docker 버전 : Docker version 28.5.2, build ecc6942
+- Git 버전 : git version 2.53.0
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/3c58d756-6166-488b-a8fd-f4c49f68e0ee" />
 
 # 수행항목 체크리스트
