@@ -8,11 +8,12 @@
  - Git과 GitHub의 역할 차이(로컬 버전관리 vs 원격 협업 플랫폼)를 설명할 수 있다.
 
 # 실행 환경
-- OS :
+- OS : macOS 15.7.4 (24G517)
 - 쉘 :
 - 터미널 :
 - Docker 버전 :
 - Git 버전 :
+<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/3c58d756-6166-488b-a8fd-f4c49f68e0ee" />
 
 # 수행항목 체크리스트
 [] 터미널
