@@ -16,6 +16,9 @@
 
 # 수행항목 체크리스트
 [x] 터미널 조작로그
+ <img width="1394" height="1106" alt="image" src="https://github.com/user-attachments/assets/975e125e-3f08-4261-8449-74107592c032" />
+ <img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/4cd03eab-bc05-4c3d-a51f-f885a49c2259" />
+
 
 
 [] 권한
