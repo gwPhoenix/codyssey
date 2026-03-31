@@ -19,9 +19,10 @@
 [x] 터미널 조작로그
 <img width="1394" height="1106" alt="image" src="https://github.com/user-attachments/assets/4e6c4f5e-2d90-4f37-a3b8-52ae32fcca69" />
 <img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/a77f6866-c8b8-4d12-bcb9-a7f82811dbaf" />
+<img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/dc4aa6d0-9d55-4748-8c90-31ba5520ea87" />
 
 
-<img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/94bc08dc-f4f7-4f1f-abed-b3eb47e40ad6" />
+
 <img width="1394" height="1246" alt="image" src="https://github.com/user-attachments/assets/8a71f1a8-dbf8-454a-a6ef-f56efd077934" />
 <img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/43d9438a-2468-4a0f-8841-3516ab2dc998" />
 
