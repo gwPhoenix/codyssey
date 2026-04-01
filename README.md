@@ -282,6 +282,16 @@ myapp
 na908158800@c3r1s4 ~ % docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
+```
+Last login: Wed Apr  1 11:43:03 on ttys000
+na908158800@c3r1s4 ~ % docker run -d ubuntu sleep 1000
+4cb893e2d5c86fab460cd435763a6cef9bacadb489e87fded863acc3680ea450
+na908158800@c3r1s4 ~ % docekr stats
+
+
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS 
+57826daaccee   romantic_montalcini   0.00%     3.145MiB / 15.67GiB   0.02%     1.13kB / 126B   2.52MB / 0B   1 
+```
 
 
 [] Dockerfile
