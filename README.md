@@ -553,7 +553,24 @@ EXPOSE 80
 
 <br>
 
-[] 포트
+[] 포트 매핑 & 브라우저 접속
+- Host Port: 8080
+- Container Port: 80
+- 접속 URL: http://localhost:8080
+```
+Last login: Wed Apr  1 15:26:36 on ttys000
+na908158800@c3r1s4 ~ % docker run -d -p 8080:80 my-web-app:1.0
+eb25fe9ffed84e066d22812565b1cbfff04b99a1f4643d76c93a4d7792ce93b6
+na908158800@c3r1s4 ~ % docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+eb25fe9ffed8   my-web-app:1.0   "/docker-entrypoint.…"   13 seconds ago   Up 12 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   quirky_gauss
+adb9b14afd51   ubuntu           "bash"                   3 hours ago      Up 2 hours   
+```
+<img width="2020" height="284" alt="image" src="https://github.com/user-attachments/assets/8c3964d1-d700-4880-9594-35384ae507d6" />
+
+
+<br>
+
 [] 볼륨
 [] Git
 [] GitHub
