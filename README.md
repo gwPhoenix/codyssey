@@ -251,7 +251,6 @@ na908158800@c3r1s4 permission_test % ls -ld test_directory
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
 [x] Docker 운영/검증
-<img width="1394" height="2870" alt="image" src="https://github.com/user-attachments/assets/e4831d07-5c1a-450c-aaef-bfd3421a7dcc" />
 <img width="1394" height="686" alt="image" src="https://github.com/user-attachments/assets/ce0147c2-8567-4aa5-8648-d0ea16434b2b" />
 <img width="1394" height="658" alt="image" src="https://github.com/user-attachments/assets/6d737afa-c51f-4a9a-a5d3-719aaa741528" />
 
