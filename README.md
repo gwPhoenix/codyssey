@@ -251,7 +251,37 @@ na908158800@c3r1s4 permission_test % ls -ld test_directory
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
 [x] Docker 운영/검증
-<img width="1394" height="658" alt="image" src="https://github.com/user-attachments/assets/6d737afa-c51f-4a9a-a5d3-719aaa741528" />
+```
+Last login: Wed Apr  1 11:28:50 on ttys000
+na908158800@c3r1s4 ~ % docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+na908158800@c3r1s4 ~ % docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+817807f3c64e: Already exists 
+Digest: sha256:186072bba1b2f436cbb91ef2567abca677337cfc786c86e107d25b7072feef0c
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+na908158800@c3r1s4 ~ % docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       latest    f794f40ddfff   5 weeks ago   78.1MB
+na908158800@c3r1s4 ~ % docker run -d --name myapp ubuntu sleep 1000
+docker: Error response from daemon: Conflict. The container name "/myapp" is already in use by container "883060181ac08dee9ce924f40eed0bef13e4869c47a4c4d1bca2c9d2937c0725". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+na908158800@c3r1s4 ~ % docker rm myapp
+myapp
+na908158800@c3r1s4 ~ % docker run -d --name myapp ubuntu sleep 1000
+767cb24e58a3729551182c0efcaee43228f40f0fb31c51c4b8efe65342144b25
+na908158800@c3r1s4 ~ % docker ps
+CONTAINER ID   IMAGE     COMMAND        CREATED         STATUS         PORTS     NAMES
+767cb24e58a3   ubuntu    "sleep 1000"   7 seconds ago   Up 7 seconds             myapp
+na908158800@c3r1s4 ~ % docker logs myapp
+na908158800@c3r1s4 ~ % docker stop myapp
+myapp
+na908158800@c3r1s4 ~ % docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
 
 
 [] Dockerfile
