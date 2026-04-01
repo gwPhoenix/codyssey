@@ -353,6 +353,50 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
+```
+na908158800@c3r1s4 ~ % docker run -it ubuntu bash
+root@50eb7c1cbe60:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@50eb7c1cbe60:/# ls -la
+total 16
+drwxr-xr-x   1 root root   6 Apr  1 03:22 .
+drwxr-xr-x   1 root root   6 Apr  1 03:22 ..
+-rwxr-xr-x   1 root root   0 Apr  1 03:22 .dockerenv
+lrwxrwxrwx   1 root root   7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   1 root root   0 Apr 22  2024 boot
+drwxr-xr-x   5 root root 340 Apr  1 03:22 dev
+drwxr-xr-x   1 root root  56 Apr  1 03:22 etc
+drwxr-xr-x   1 root root  12 Feb 17 02:09 home
+lrwxrwxrwx   1 root root   7 Apr 22  2024 lib -> usr/lib
+lrwxrwxrwx   1 root root   9 Apr 22  2024 lib64 -> usr/lib64
+drwxr-xr-x   1 root root   0 Feb 17 02:02 media
+drwxr-xr-x   1 root root   0 Feb 17 02:02 mnt
+drwxr-xr-x   1 root root   0 Feb 17 02:02 opt
+dr-xr-xr-x 229 root root   0 Apr  1 03:22 proc
+drwx------   1 root root  30 Feb 17 02:09 root
+drwxr-xr-x   1 root root  22 Feb 17 02:09 run
+lrwxrwxrwx   1 root root   8 Apr 22  2024 sbin -> usr/sbin
+drwxr-xr-x   1 root root   0 Feb 17 02:02 srv
+dr-xr-xr-x  11 root root   0 Apr  1 03:22 sys
+drwxrwxrwt   1 root root   0 Feb 17 02:09 tmp
+drwxr-xr-x   1 root root  10 Feb 17 02:02 usr
+drwxr-xr-x   1 root root  90 Feb 17 02:09 var
+root@50eb7c1cbe60:/# pwd
+/
+root@50eb7c1cbe60:/# echo $HOME
+/root
+root@50eb7c1cbe60:/# uname -a
+Linux 50eb7c1cbe60 6.17.8-orbstack-00308-g8f9c941121b1 #1 SMP PREEMPT Thu Nov 20 09:34:02 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+root@50eb7c1cbe60:/# hostname
+50eb7c1cbe60
+root@50eb7c1cbe60:/# echo "Hello from Docker Container"> test.txt
+root@50eb7c1cbe60:/# cat test.txt
+Hello from Docker Container
+root@50eb7c1cbe60:/# exit
+exit
+```
+
 <br>
 
 [] Dockerfile
