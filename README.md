@@ -301,6 +301,7 @@ CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     N
 <br>
 
 [x] docker - Hello-World
+- hello-world 실행
 ```
 Last login: Wed Apr  1 12:00:13 on ttys000
 
@@ -353,6 +354,7 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
+- Ubuntu 컨테이너 실행 및 내부 진입
 ```
 na908158800@c3r1s4 ~ % docker run -it ubuntu bash
 root@50eb7c1cbe60:/# ls
