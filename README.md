@@ -12,7 +12,33 @@
 - 터미널 : xterm-256color
 - Docker 버전 : Docker version 28.5.2, build ecc6942
 - Git 버전 : git version 2.53.0
-<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/788f0789-0fed-44b9-a972-a901a54ae0b0" />
+```
+Last login: Tue Mar 31 20:26:34 on ttys000
+na908158800@c3r1s4 ~ % system_profiler SPSoftwareDataType 
+Software:
+
+    System Software Overview:
+
+      System Version: macOS 15.7.4 (24G517)
+      Kernel Version: Darwin 24.6.0
+      Boot Volume: Macintosh HD
+      Boot Mode: Normal
+      Computer Name: c3r1s4.codyssey.kr
+      User Name: 김권우 (na908158800)
+      Secure Virtual Memory: Enabled
+      System Integrity Protection: Disabled
+      Time since boot: 1 day, 2 hours, 10 minutes
+
+na908158800@c3r1s4 ~ % echo $SHELL
+/bin/zsh
+na908158800@c3r1s4 ~ % echo $TERM
+xterm-256color
+na908158800@c3r1s4 ~ % docker --version
+Docker version 28.5.2, build ecc6942
+na908158800@c3r1s4 ~ % git --version
+git version 2.53.0
+```
+
 
 
 # 수행항목 체크리스트
