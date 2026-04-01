@@ -225,7 +225,31 @@ permission_test
 ```
 
 [x] 권한 확인 및 변경
-<img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/0c214b5f-b82c-4048-a6e1-e4c1a11358c2" />
+```
+Last login: Wed Apr  1 11:11:25 on ttys000
+na908158800@c3r1s4 ~ % cd permission_test
+na908158800@c3r1s4 permission_test % ls -la
+total 8
+drwxr-xr-x   4 na908158800  na908158800  128 Mar 31 17:08 .
+drwxr-x---+ 24 na908158800  na908158800  768 Apr  1 11:23 ..
+drwx--xr-x   3 na908158800  na908158800   96 Mar 31 17:09 test_directory
+-rw-------   1 na908158800  na908158800   20 Mar 31 17:08 test_file.txt
+na908158800@c3r1s4 permission_test % ls -l test_file.txt
+-rw-------  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
+na908158800@c3r1s4 permission_test % ls -ld test_directory
+drwx--xr-x  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
+na908158800@c3r1s4 permission_test % chomod g-r test_file.txt
+zsh: command not found: chomod
+na908158800@c3r1s4 permission_test % chmod g-r test_file.txt
+na908158800@c3r1s4 permission_test % ls -l test_file.txt 
+-rw-------  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
+na908158800@c3r1s4 permission_test % chmod g+r test_file.txt
+na908158800@c3r1s4 permission_test % ls -l test_file.txt
+-rw-r-----  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
+na908158800@c3r1s4 permission_test % chmod 722 test_directory
+na908158800@c3r1s4 permission_test % ls -ld test_directory
+drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
+```
 [x] Docker 운영/검증
 <img width="1394" height="2870" alt="image" src="https://github.com/user-attachments/assets/e4831d07-5c1a-450c-aaef-bfd3421a7dcc" />
 <img width="1394" height="686" alt="image" src="https://github.com/user-attachments/assets/ce0147c2-8567-4aa5-8648-d0ea16434b2b" />
