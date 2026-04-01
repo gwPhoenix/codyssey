@@ -447,7 +447,7 @@ na908158800@c3r1s4 ~ %
 
 <br>
 
-[] Dockerfile
+[x] Dockerfile
 - 프로젝트 구조 만들기 (디렉터리 & 파일 생성) & 웹서버 소스코드 작성
 ```
 Last login: Wed Apr  1 14:24:24 on ttys000
@@ -553,7 +553,7 @@ EXPOSE 80
 
 <br>
 
-[] 포트 매핑 & 브라우저 접속
+[x] 포트 매핑 & 브라우저 접속
 - Host Port: 8080
 - Container Port: 80
 - 접속 URL: http://localhost:8080
@@ -571,7 +571,10 @@ adb9b14afd51   ubuntu           "bash"                   3 hours ago      Up 2 h
 
 <br>
 
-[] 볼륨
+[] 바인드 마운트 반영 + 볼륨 영속성
+
+<br>
+
 [] Git
 [] GitHub
 
