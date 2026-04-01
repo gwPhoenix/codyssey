@@ -301,6 +301,21 @@ CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     N
 <br>
 
 [] Dockerfile
+- 프로젝트 구조 만들기
+```
+Last login: Wed Apr  1 11:44:07 on ttys000
+na908158800@c3r1s4 ~ % mkdir docker-web-server
+na908158800@c3r1s4 ~ % cd docker-web-server
+na908158800@c3r1s4 docker-web-server % mkdir app
+```
+- 웹서버 소스코드 작성
+- Dockerfile 작성
+- 빌드 및 실행 명령어
+
+
+
+
+
 [] 포트
 [] 볼륨
 [] Git
@@ -316,11 +331,7 @@ CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     N
   ☞ 확인 : Sleep 명령어 사용으로, 쉬는 중이므로 로그출력되지 않는 것이 정상
   ☞ 해결 : 정상 상황이므로 해결 불필요
 
-# Dockerfile 기반 웹서버 컨테이너
-- 웹 서버 소스코드(예: app/ 또는 src/)
-- Dockerfile
-- 빌드/실행 명령 및 결과 로그(터미널 스크린샷 가능)
-- 포트 매핑 접속 성공 증거(스크린샷 또는 로그)
+
 # 포트 매핑 접속 증거
 - p <host_port>:<container_port>로 실행 후, 브라우저 접속 화면(주소창 포함)을 기술 문서에 첨부한다.
 # 바인드 마운트 반영 + 볼륨 영속성 증거
