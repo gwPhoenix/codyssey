@@ -595,11 +595,3 @@ adb9b14afd51   ubuntu           "bash"                   3 hours ago      Up 2 h
 # Git 설정 및 GitHub/VSCode 연동 증거
 - Git 사용자 정보·기본 브랜치 설정 후, VSCode에서 GitHub 로그인 및 저장소 연동 완료
 - 민감한 개인 정보(ID/PW, 토큰 등)가 포함되지 않도록 주의한다.
-
-
-
- # 요구사항
-1. 
-    - 수행 항목 체크리스트(터미널/권한/Docker/Dockerfile/포트/마운트/볼륨/Git/GitHub)
-    - 검증 방법(어떤 명령으로 무엇을 확인했는지) + 결과 위치/증거 링크
-  - 기술 문서 내 명령/출력은 코드블록으로 정리한다.
