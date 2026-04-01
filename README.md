@@ -224,6 +224,7 @@ file_txt
 permission_test
 ```
 
+
 [x] 권한 확인 및 변경
 ```
 Last login: Wed Apr  1 11:11:25 on ttys000
@@ -250,6 +251,8 @@ na908158800@c3r1s4 permission_test % chmod 722 test_directory
 na908158800@c3r1s4 permission_test % ls -ld test_directory
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
+
+
 [x] Docker 운영/검증
 ```
 Last login: Wed Apr  1 11:28:50 on ttys000
