@@ -448,17 +448,39 @@ na908158800@c3r1s4 ~ %
 <br>
 
 [] Dockerfile
-- 프로젝트 구조 만들기
+- 프로젝트 구조 만들기 (디렉터리 & 파일 생성) & 웹서버 소스코드 작성
 ```
-Last login: Wed Apr  1 11:44:07 on ttys000
-na908158800@c3r1s4 ~ % mkdir docker-web-server
-na908158800@c3r1s4 ~ % cd docker-web-server
-na908158800@c3r1s4 docker-web-server % mkdir app
+Last login: Wed Apr  1 14:24:24 on ttys000
+na908158800@c3r1s4 ~ % mkdir -p my-web-app/app
+na908158800@c3r1s4 ~ % cd my-web-app
+na908158800@c3r1s4 my-web-app % echo '<h1>Hello Docker!</h1>'> app/index.html
+na908158800@c3r1s4 my-web-app % ls -la
+total 0
+drwxr-xr-x   3 na908158800  na908158800   96 Apr  1 14:25 .
+drwxr-x---+ 27 na908158800  na908158800  864 Apr  1 14:24 ..
+drwxr-xr-x   3 na908158800  na908158800   96 Apr  1 14:25 app
+na908158800@c3r1s4 my-web-app % ls
+app
+na908158800@c3r1s4 my-web-app % cd app
+na908158800@c3r1s4 app % ls -la
+total 8
+drwxr-xr-x  3 na908158800  na908158800  96 Apr  1 14:25 .
+drwxr-xr-x  3 na908158800  na908158800  96 Apr  1 14:25 ..
+-rw-r--r--  1 na908158800  na908158800  23 Apr  1 14:25 index.html
 ```
-- 웹서버 소스코드 작성
 - Dockerfile 작성
+```
+na908158800@c3r1s4 app % cd ../
+na908158800@c3r1s4 my-web-app % cat> Dockerfile <<'E0F'
+heredoc> FROM nginx:latest
+COPY app/ /usr/share/nginx/html/
+EXPOSE 80
+EOF
+```  
 - 빌드 및 실행 명령어
+```
 
+```
 
 
 
