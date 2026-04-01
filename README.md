@@ -43,7 +43,186 @@ git version 2.53.0
 
 # 수행항목 체크리스트
 [x] 터미널 조작로그
-<img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/b45ed1b8-5dc8-4d7e-9653-c0ec9b20ba6f" />
+```
+Last login: Wed Apr  1 11:09:12 on ttys000
+na908158800@c3r1s4 ~ % pwd
+/Users/na908158800
+na908158800@c3r1s4 ~ % ls
+571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+OrbStack
+Pictures
+Public
+file_copy.txt
+permission_test
+na908158800@c3r1s4 ~ % ls -la
+total 968
+drwxr-x---+ 23 na908158800  na908158800     736 Apr  1 11:11 .
+drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
+-r--------   1 na908158800  na908158800       7 Mar 31 08:59 .CFUserTextEncoding
+-rw-r--r--@  1 na908158800  na908158800    8196 Mar 31 09:50 .DS_Store
+drwx------+ 82 na908158800  na908158800    2624 Apr  1 10:29 .Trash
+drwxr-xr-x   5 na908158800  na908158800     160 Mar 31 09:03 .docker
+drwxr-xr-x  10 na908158800  na908158800     320 Mar 31 10:41 .orbstack
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .ssh
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .vscode
+-rw-------   1 na908158800  na908158800    1663 Apr  1 11:11 .zsh_history
+drwx------  36 na908158800  na908158800    1152 Apr  1 11:11 .zsh_sessions
+-rw-r--r--@  1 na908158800  na908158800  467942 Mar 31 17:50 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+drwx------+  9 na908158800  na908158800     288 Apr  1 10:38 Desktop
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Documents
+drwx------+  6 na908158800  na908158800     192 Apr  1 10:21 Downloads
+drwx------@ 80 na908158800  na908158800    2560 Mar 31 14:00 Library
+drwx------   4 na908158800  na908158800     128 Apr  1 09:07 Movies
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Music
+drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
+drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
+drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
+-rw-r--r--   1 na908158800  na908158800       6 Mar 31 14:55 file_copy.txt
+drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
+na908158800@c3r1s4 ~ % mkdir test_dir
+na908158800@c3r1s4 ~ % ls
+571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+OrbStack
+Pictures
+Public
+file_copy.txt
+permission_test
+test_dir
+na908158800@c3r1s4 ~ % touch file_txt
+na908158800@c3r1s4 ~ % ls -la
+total 968
+drwxr-x---+ 25 na908158800  na908158800     800 Apr  1 11:12 .
+drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
+-r--------   1 na908158800  na908158800       7 Mar 31 08:59 .CFUserTextEncoding
+-rw-r--r--@  1 na908158800  na908158800    8196 Mar 31 09:50 .DS_Store
+drwx------+ 82 na908158800  na908158800    2624 Apr  1 10:29 .Trash
+drwxr-xr-x   5 na908158800  na908158800     160 Mar 31 09:03 .docker
+drwxr-xr-x  10 na908158800  na908158800     320 Mar 31 10:41 .orbstack
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .ssh
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .vscode
+-rw-------   1 na908158800  na908158800    1663 Apr  1 11:11 .zsh_history
+drwx------  36 na908158800  na908158800    1152 Apr  1 11:11 .zsh_sessions
+-rw-r--r--@  1 na908158800  na908158800  467942 Mar 31 17:50 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+drwx------+  9 na908158800  na908158800     288 Apr  1 10:38 Desktop
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Documents
+drwx------+  6 na908158800  na908158800     192 Apr  1 10:21 Downloads
+drwx------@ 80 na908158800  na908158800    2560 Mar 31 14:00 Library
+drwx------   4 na908158800  na908158800     128 Apr  1 09:07 Movies
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Music
+drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
+drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
+drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
+-rw-r--r--   1 na908158800  na908158800       6 Mar 31 14:55 file_copy.txt
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
+drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
+drwxr-xr-x   2 na908158800  na908158800      64 Apr  1 11:12 test_dir
+na908158800@c3r1s4 ~ % cat file.txt
+cat: file.txt: No such file or directory
+na908158800@c3r1s4 ~ % echo "Hello"> file.txt
+na908158800@c3r1s4 ~ % cat file.txt
+Hello
+na908158800@c3r1s4 ~ % cp file.txt file_copy.txt
+na908158800@c3r1s4 ~ % ls -la
+total 976
+drwxr-x---+ 26 na908158800  na908158800     832 Apr  1 11:15 .
+drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
+-r--------   1 na908158800  na908158800       7 Mar 31 08:59 .CFUserTextEncoding
+-rw-r--r--@  1 na908158800  na908158800    8196 Mar 31 09:50 .DS_Store
+drwx------+ 82 na908158800  na908158800    2624 Apr  1 10:29 .Trash
+drwxr-xr-x   5 na908158800  na908158800     160 Mar 31 09:03 .docker
+drwxr-xr-x  10 na908158800  na908158800     320 Mar 31 10:41 .orbstack
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .ssh
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .vscode
+-rw-------   1 na908158800  na908158800    1663 Apr  1 11:11 .zsh_history
+drwx------  36 na908158800  na908158800    1152 Apr  1 11:11 .zsh_sessions
+-rw-r--r--@  1 na908158800  na908158800  467942 Mar 31 17:50 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+drwx------+  9 na908158800  na908158800     288 Apr  1 10:38 Desktop
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Documents
+drwx------+  6 na908158800  na908158800     192 Apr  1 10:21 Downloads
+drwx------@ 80 na908158800  na908158800    2560 Mar 31 14:00 Library
+drwx------   4 na908158800  na908158800     128 Apr  1 09:07 Movies
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Music
+drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
+drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
+drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
+-rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:15 file.txt
+-rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:17 file_copy.txt
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
+drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
+drwxr-xr-x   2 na908158800  na908158800      64 Apr  1 11:12 test_dir
+na908158800@c3r1s4 ~ % mv renamed.txt ..
+mv: rename renamed.txt to ../renamed.txt: No such file or directory
+na908158800@c3r1s4 ~ % mv file.txt renamed.txt
+na908158800@c3r1s4 ~ % mv renamed.txt ..
+mv: rename renamed.txt to ../renamed.txt: Permission denied
+na908158800@c3r1s4 ~ % mv renamed.txt test_dir/
+na908158800@c3r1s4 ~ % ls -la
+total 968
+drwxr-x---+ 25 na908158800  na908158800     800 Apr  1 11:20 .
+drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
+-r--------   1 na908158800  na908158800       7 Mar 31 08:59 .CFUserTextEncoding
+-rw-r--r--@  1 na908158800  na908158800    8196 Mar 31 09:50 .DS_Store
+drwx------+ 82 na908158800  na908158800    2624 Apr  1 10:29 .Trash
+drwxr-xr-x   5 na908158800  na908158800     160 Mar 31 09:03 .docker
+drwxr-xr-x  10 na908158800  na908158800     320 Mar 31 10:41 .orbstack
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .ssh
+drwxr-xr-x   3 na908158800  na908158800      96 Mar 31 09:03 .vscode
+-rw-------   1 na908158800  na908158800    1663 Apr  1 11:11 .zsh_history
+drwx------  36 na908158800  na908158800    1152 Apr  1 11:11 .zsh_sessions
+-rw-r--r--@  1 na908158800  na908158800  467942 Mar 31 17:50 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+drwx------+  9 na908158800  na908158800     288 Apr  1 10:38 Desktop
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Documents
+drwx------+  6 na908158800  na908158800     192 Apr  1 10:21 Downloads
+drwx------@ 80 na908158800  na908158800    2560 Mar 31 14:00 Library
+drwx------   4 na908158800  na908158800     128 Apr  1 09:07 Movies
+drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Music
+drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
+drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
+drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
+-rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:17 file_copy.txt
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
+drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
+drwxr-xr-x   3 na908158800  na908158800      96 Apr  1 11:20 test_dir
+na908158800@c3r1s4 ~ % cd test_dir 
+na908158800@c3r1s4 test_dir % ls -la 
+total 8
+drwxr-xr-x   3 na908158800  na908158800   96 Apr  1 11:20 .
+drwxr-x---+ 25 na908158800  na908158800  800 Apr  1 11:20 ..
+-rw-r--r--   1 na908158800  na908158800    6 Apr  1 11:15 renamed.txt
+na908158800@c3r1s4 test_dir % rm renamed.txt
+na908158800@c3r1s4 test_dir % ls -la
+total 0
+drwxr-xr-x   2 na908158800  na908158800   64 Apr  1 11:22 .
+drwxr-x---+ 25 na908158800  na908158800  800 Apr  1 11:20 ..
+na908158800@c3r1s4 test_dir % cd ..
+na908158800@c3r1s4 ~ % rmdir test_dir
+na908158800@c3r1s4 ~ % ls
+571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+OrbStack
+Pictures
+Public
+file_copy.txt
+file_txt
+permission_test
+```
 
 [x] 권한 확인 및 변경
 <img width="1394" height="966" alt="image" src="https://github.com/user-attachments/assets/0c214b5f-b82c-4048-a6e1-e4c1a11358c2" />
