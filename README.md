@@ -399,7 +399,7 @@ root@50eb7c1cbe60:/# exit
 exit
 ```
 - attach vs exec 차이 관찰
-  - attach : exit할 경우, 컨터이네 종료
+  - attach : exit할 경우, 컨테이너 종료
   - exec : exit해도 컨테이너 유지, 실행중인 컨테이너에 새로운 프로세스 가능
 ```
 Last login: Wed Apr  1 12:50:17 on ttys000
