@@ -224,6 +224,7 @@ file_txt
 permission_test
 ```
 
+<br>
 
 [x] 권한 확인 및 변경
 ```
@@ -252,6 +253,7 @@ na908158800@c3r1s4 permission_test % ls -ld test_directory
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
 
+<br>
 
 [x] Docker 운영/검증
 ```
@@ -296,6 +298,7 @@ CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     N
 57826daaccee   romantic_montalcini   0.00%     3.145MiB / 15.67GiB   0.02%     1.13kB / 126B   2.52MB / 0B   1 
 ```
 
+<br>
 
 [] Dockerfile
 [] 포트
