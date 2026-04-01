@@ -471,15 +471,84 @@ drwxr-xr-x  3 na908158800  na908158800  96 Apr  1 14:25 ..
 - Dockerfile 작성
 ```
 na908158800@c3r1s4 app % cd ../
-na908158800@c3r1s4 my-web-app % cat> Dockerfile <<'E0F'
+na908158800@c3r1s4 my-web-app % cat> Dockerfile <<'EOF'
 heredoc> FROM nginx:latest
 COPY app/ /usr/share/nginx/html/
 EXPOSE 80
 EOF
 ```  
-- 빌드 및 실행 명령어
+- 빌드 및 실행
 ```
+na908158800@c3r1s4 my-web-app % docker build -t my-web-app:1.0 
+ERROR: docker: 'docker buildx build' requires 1 argument
 
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+na908158800@c3r1s4 my-web-app % docker build -t my-web-app:1.0 .
+[+] Building 8.7s (7/7) FINISHED                                docker:orbstack
+ => [internal] load build definition from Dockerfile                       0.1s
+ => => transferring dockerfile: 98B                                        0.1s
+ => [internal] load metadata for docker.io/library/nginx:latest            2.8s
+ => [internal] load .dockerignore                                          0.1s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build context                                          0.2s
+ => => transferring context: 91B                                           0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:7150b3a39203cb5bee61  4.6s
+ => => resolve docker.io/library/nginx:latest@sha256:7150b3a39203cb5bee61  0.2s
+ => => sha256:c3fe1eeae810f4a585961f17339c93f0fb1c7c8d5c0 2.29kB / 2.29kB  0.0s
+ => => sha256:0cf1d6af5ca72e2ca196afdbdbe26d96f141bd3dc14 9.09kB / 9.09kB  0.0s
+ => => sha256:7150b3a39203cb5bee612ff4a9d18774f8c7caf63 10.23kB / 10.23kB  0.0s
+ => => sha256:ec781dee3f4719c2ca0dd9e73cb1d4ed834ed1a40 29.78MB / 29.78MB  1.2s
+ => => sha256:bb3d0aa29654655a18d97605cd63947d39ca5166d 33.16MB / 33.16MB  1.3s
+ => => sha256:510ddf6557d618d548b6f7680a84dfa925fea17316d3352 626B / 626B  1.0s
+ => => sha256:cde7a05ae42831ee510e8948b80b25c297a1080875a3479 955B / 955B  1.5s
+ => => extracting sha256:ec781dee3f4719c2ca0dd9e73cb1d4ed834ed1a406495eb6  1.0s
+ => => sha256:587e3d84dbb5b5fc406b2b292318c9a446e72c144ad849b 402B / 402B  1.7s
+ => => sha256:3189680c601f46244f1706d0d197ddb415d9bb75423 1.21kB / 1.21kB  1.8s
+ => => sha256:5e815e07e5699b40479214a6a2a30d647495d99cd0f 1.40kB / 1.40kB  2.0s
+ => => extracting sha256:bb3d0aa29654655a18d97605cd63947d39ca5166d44c3341  0.7s
+ => => extracting sha256:510ddf6557d618d548b6f7680a84dfa925fea17316d33526  0.0s
+ => => extracting sha256:cde7a05ae42831ee510e8948b80b25c297a1080875a3479c  0.0s
+ => => extracting sha256:587e3d84dbb5b5fc406b2b292318c9a446e72c144ad849b5  0.0s
+ => => extracting sha256:3189680c601f46244f1706d0d197ddb415d9bb754236c042  0.0s
+ => => extracting sha256:5e815e07e5699b40479214a6a2a30d647495d99cd0f253ee  0.0s
+ => [2/2] COPY app/ /usr/share/nginx/html/                                 0.4s
+ => exporting to image                                                     0.2s
+ => => exporting layers                                                    0.1s
+ => => writing image sha256:22573731b1307e78bb40d39aede8d370f4657231fb258  0.0s
+ => => naming to docker.io/library/my-web-app:1.0                          0.0s
+na908158800@c3r1s4 my-web-app % docker run -d -p 8080:80 --name my-web-app:1.0
+docker: 'docker run' requires at least 1 argument
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+See 'docker run --help' for more information
+na908158800@c3r1s4 my-web-app % docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+my-web-app    1.0       22573731b130   2 minutes ago   161MB
+hello-world   latest    e2ac70e7319a   8 days ago      10.1kB
+ubuntu        latest    f794f40ddfff   5 weeks ago     78.1MB
+na908158800@c3r1s4 my-web-app % docker run -d -p 8080:80 my-web-app:1.0
+bad9fe91788baeed4415dba8b950f4a3e9b2d751a35a0feb686252fbb06bb05a
+na908158800@c3r1s4 my-web-app % docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+bad9fe91788b   my-web-app:1.0   "/docker-entrypoint.…"   16 seconds ago   Up 15 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   blissful_gauss
+adb9b14afd51   ubuntu           "bash"                   2 hours ago      Up 2 hours                                                my-ubuntu
+na908158800@c3r1s4 my-web-app % curl http://localhost:8080
+<h1>Hello Docker!</h1>
+na908158800@c3r1s4 my-web-app % ls -la
+total 8
+drwxr-xr-x   4 na908158800  na908158800  128 Apr  1 15:03 .
+drwxr-x---+ 27 na908158800  na908158800  864 Apr  1 15:01 ..
+-rw-r--r--   1 na908158800  na908158800   61 Apr  1 15:03 Dockerfile
+drwxr-xr-x   3 na908158800  na908158800   96 Apr  1 15:02 app
+na908158800@c3r1s4 my-web-app % cat app/index.html
+<h1>Hello Docker!</h1>
+na908158800@c3r1s4 my-web-app % cat Dockerfile
+FROM nginx:latest
+COPY app/ /usr/share/nginx/html/
+EXPOSE 80
 ```
 
 
