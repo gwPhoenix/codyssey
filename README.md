@@ -447,7 +447,11 @@ na908158800@c3r1s4 ~ %
 
 <br>
 
-[x] Dockerfile
+[x] 기존 Dockerfile 기반 커스텀 이미지 제작
+
+
+
+
 - 프로젝트 구조 만들기 (디렉터리 & 파일 생성) & 웹서버 소스코드 작성
 ```
 Last login: Wed Apr  1 14:24:24 on ttys000
