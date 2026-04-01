@@ -43,7 +43,6 @@ git version 2.53.0
 
 # 수행항목 체크리스트
 [x] 터미널 조작로그
-<img width="1394" height="1134" alt="image" src="https://github.com/user-attachments/assets/dc4aa6d0-9d55-4748-8c90-31ba5520ea87" />
 <img width="1394" height="1246" alt="image" src="https://github.com/user-attachments/assets/74c8702f-c4bd-4a89-9a14-b548caf9e18b" />
 <img width="1394" height="770" alt="image" src="https://github.com/user-attachments/assets/b45ed1b8-5dc8-4d7e-9653-c0ec9b20ba6f" />
 
