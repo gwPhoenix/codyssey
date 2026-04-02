@@ -255,24 +255,20 @@ drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory   #권한
 [x] Docker 운영/검증
 ```
 Last login: Wed Apr  1 11:28:50 on ttys000
-na908158800@c3r1s4 ~ % docker images
-REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
-na908158800@c3r1s4 ~ % docker pull ubuntu
+na908158800@c3r1s4 ~ % docker images   #보관중인 이미지 확인
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE   #이미지 목록이 비어있음
+na908158800@c3r1s4 ~ % docker pull ubuntu   #우분투 이미지 다운로드
 Using default tag: latest
 latest: Pulling from library/ubuntu
 817807f3c64e: Already exists 
 Digest: sha256:186072bba1b2f436cbb91ef2567abca677337cfc786c86e107d25b7072feef0c
 Status: Downloaded newer image for ubuntu:latest
 docker.io/library/ubuntu:latest
-na908158800@c3r1s4 ~ % docker images
+na908158800@c3r1s4 ~ % docker images    #보관중인 이미지 확인
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
-ubuntu       latest    f794f40ddfff   5 weeks ago   78.1MB
-na908158800@c3r1s4 ~ % docker run -d --name myapp ubuntu sleep 1000
-docker: Error response from daemon: Conflict. The container name "/myapp" is already in use by container "883060181ac08dee9ce924f40eed0bef13e4869c47a4c4d1bca2c9d2937c0725". You have to remove (or rename) that container to be able to reuse that name.
-
-Run 'docker run --help' for more information
-na908158800@c3r1s4 ~ % docker rm myapp
-myapp
+ubuntu       latest    f794f40ddfff   5 weeks ago   78.1MB   #다운로드된 우분투 이미지 확인
+```
+```
 na908158800@c3r1s4 ~ % docker run -d --name myapp ubuntu sleep 1000
 767cb24e58a3729551182c0efcaee43228f40f0fb31c51c4b8efe65342144b25
 na908158800@c3r1s4 ~ % docker ps
