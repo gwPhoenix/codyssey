@@ -14,7 +14,7 @@
 - Git 버전 : git version 2.53.0
 ```
 Last login: Tue Mar 31 20:26:34 on ttys000
-na908158800@c3r1s4 ~ % system_profiler SPSoftwareDataType 
+na908158800@c3r1s4 ~ % system_profiler SPSoftwareDataType   #운영체제 확인(맥용)
 Software:
 
     System Software Overview:
@@ -29,13 +29,13 @@ Software:
       System Integrity Protection: Disabled
       Time since boot: 1 day, 2 hours, 10 minutes
 
-na908158800@c3r1s4 ~ % echo $SHELL
+na908158800@c3r1s4 ~ % echo $SHELL   #쉘 확인
 /bin/zsh
-na908158800@c3r1s4 ~ % echo $TERM
+na908158800@c3r1s4 ~ % echo $TERM   #터미널 확인
 xterm-256color
-na908158800@c3r1s4 ~ % docker --version
+na908158800@c3r1s4 ~ % docker --version   #도커 버전 확인
 Docker version 28.5.2, build ecc6942
-na908158800@c3r1s4 ~ % git --version
+na908158800@c3r1s4 ~ % git --version   # 깃 버전 확인
 git version 2.53.0
 ```
 
@@ -45,7 +45,7 @@ git version 2.53.0
 [x] 터미널 조작로그
 ```
 Last login: Wed Apr  1 11:09:12 on ttys000
-na908158800@c3r1s4 ~ % pwd
+na908158800@c3r1s4 ~ % pwd   #현재 경로 확인
 /Users/na908158800
 na908158800@c3r1s4 ~ % ls
 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
