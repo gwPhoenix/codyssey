@@ -499,17 +499,17 @@ a40ec1abd88f5e3761717211e2f2671ea0dc00f2f9b1f99f151d2a2995e4a050
 
 <br>
 
-[] 바인드 마운트 반영 + 볼륨 영속성
+[x] 바인드 마운트 반영 + 볼륨 영속성
 Part1. Docker 볼륨 영속성 검증
 - Docker 볼륨 생성 & 확인
 ```
 Last login: Thu Apr  2 15:45:47 on ttys000
-na908158800@c3r1s4 ~ % docker volume create my-volume
+na908158800@c3r1s4 ~ % docker volume create my-volume   #"my-volume"이름의 볼륨(=저장소) 생성
 my-volume
-na908158800@c3r1s4 ~ % docker volume ls
+na908158800@c3r1s4 ~ % docker volume ls   #볼륨 목록 확인
 DRIVER    VOLUME NAME
 local     my-volume
-na908158800@c3r1s4 ~ % docker volume inspect my-volume
+na908158800@c3r1s4 ~ % docker volume inspect my-volume   #볼륨 상세정보 확인
 [
     {
         "CreatedAt": "2026-04-02T17:13:57+09:00",
@@ -524,12 +524,24 @@ na908158800@c3r1s4 ~ % docker volume inspect my-volume
 ```
 - 볼륨을 연결한 컨테이너 실행
 ```
-na908158800@c3r1s4 ~ % docker run -d --name test-container \
-  -v my-volume:/data \
-  ubuntu sleep 1000
+na908158800@c3r1s4 ~ % docker run -d --name test-container \   #도커를 "test-container"이름으로 명명하고, 실행하되
+  -v my-volume:/data \   #"my-volume"이름의 볼륨의 data경로에 연결
+  ubuntu sleep 1000   #우분투 1000초동안 대기하는 옵션으로
 40079427800aaba2e657cfec8076f16a1ff0284fee6b17c162596284f2400667
+na908158800@c3r1s4 ~ % docker inspect test-container | grep -A 10 Mounts   #컨테이너 상제정보 확인하되, 마운트부분만 10줄까지 필터링
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "my-volume",
+                "Source": "/var/lib/docker/volumes/my-volume/_data",   #컨테이너가 해당 볼륨과 연결되어있음 확인
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
 ```
-- 데이터 생성 (컨테이너 내부) & 확인 확인 (컨테이너 삭제 전)
+- 데이터 생성 (컨테이너 내부) & 확인 (컨테이너 삭제 전)
 ```
 na908158800@c3r1s4 ~ % docker exec test-container bash -c "echo 'Docker Volume Data!' > /data/test.txt"
 na908158800@c3r1s4 ~ % docker exec test-container cat /data/test.txt
