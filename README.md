@@ -269,15 +269,18 @@ REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 ubuntu       latest    f794f40ddfff   5 weeks ago   78.1MB   #다운로드된 우분투 이미지 확인
 ```
 ```
-na908158800@c3r1s4 ~ % docker run -d --name myapp ubuntu sleep 1000
-767cb24e58a3729551182c0efcaee43228f40f0fb31c51c4b8efe65342144b25
-na908158800@c3r1s4 ~ % docker ps
-CONTAINER ID   IMAGE     COMMAND        CREATED         STATUS         PORTS     NAMES
-767cb24e58a3   ubuntu    "sleep 1000"   7 seconds ago   Up 7 seconds             myapp
-na908158800@c3r1s4 ~ % docker logs myapp
-na908158800@c3r1s4 ~ % docker stop myapp
-myapp
-na908158800@c3r1s4 ~ % docker ps
+Last login: Thu Apr  2 11:17:20 on ttys000
+na908158800@c3r1s4 ~ % docker run -d --name test_log ubuntu \
+> sh -c "echo '컨테이너 동작중입니다';sleep 1000"
+a491afaa915eeee51921044039cefc0467a6fdad2fe0de2db19f61934f529f26
+na908158800@c3r1s4 ~ % docker logs test_log
+컨테이너 동작중입니다
+na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+a491afaa915e   ubuntu    "sh -c 'echo '컨테이…"   42 seconds ago   Up 42 seconds             test_log
+na908158800@c3r1s4 ~ % docker stop test_log
+test_log
+na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인 
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 ```
