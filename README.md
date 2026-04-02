@@ -412,7 +412,7 @@ attach test   #내용 출력
 root@adb9b14afd51:/# exit   #컨테이너의 터미널 종료
 exit
 ```
-``
+```
 na908158800@c3r1s4 ~ % docker ps -a
 CONTAINER ID   IMAGE         COMMAND        CREATED             STATUS                           PORTS     NAMES
 adb9b14afd51   ubuntu        "bash"         4 minutes ago       Exited (0) 3 minutes ago                   my-ubuntu
