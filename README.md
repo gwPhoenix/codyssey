@@ -610,3 +610,5 @@ Updated from Host
 # Git 설정 및 GitHub/VSCode 연동 증거
 - Git 사용자 정보·기본 브랜치 설정 후, VSCode에서 GitHub 로그인 및 저장소 연동 완료
 - 민감한 개인 정보(ID/PW, 토큰 등)가 포함되지 않도록 주의한다.
+![image](./깃헙연동.png)
+
