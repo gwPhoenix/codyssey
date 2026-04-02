@@ -302,7 +302,7 @@ CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     N
 ```
 Last login: Wed Apr  1 12:00:13 on ttys000
 
-na908158800@c3r1s4 ~ % docker run hello-world
+na908158800@c3r1s4 ~ % docker run hello-world   #hello-world 이미지가 있으면 바로 실행하고, 없으면 허브에서 자동 다운로드 후 실행
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -317,7 +317,7 @@ To generate this message, Docker took the following steps:
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+ $ docker run -it ubuntu   #우분투를 실행하고, 옵션으로 표준입력 허용 + 가상 터미널로 출력을 보기좋게 적용
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
@@ -328,7 +328,8 @@ For more examples and ideas, visit:
 ```
 Last login: Wed Apr  1 12:19:20 on ttys000
 na908158800@c3r1s4 ~ % docker run hello-world> hello-world-result.log 2>&1
-na908158800@c3r1s4 ~ % cat hello-world-result.log
+#"hello-world" 이미지 기반 컨테이너를 실행하고, 에러출력(2)을 정상출력(1)과 동일하게 처리하여, "hello-world-result.log"파일에 기록
+na908158800@c3r1s4 ~ % cat hello-world-result.log   #로그파일 내용보기
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -343,7 +344,7 @@ To generate this message, Docker took the following steps:
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+ $ docker run -it ubuntu
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
