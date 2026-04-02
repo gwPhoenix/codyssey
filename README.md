@@ -544,26 +544,27 @@ na908158800@c3r1s4 ~ % docker inspect test-container | grep -A 10 Mounts   #컨�
 - 데이터 생성 (컨테이너 내부) & 확인 (컨테이너 삭제 전)
 ```
 na908158800@c3r1s4 ~ % docker exec test-container bash -c "echo 'Docker Volume Data!' > /data/test.txt"
-na908158800@c3r1s4 ~ % docker exec test-container cat /data/test.txt
-Docker Volume Data!
+#"test-container"에서 bash 쉘을 실행하고, " -c " 옵션으로 뒤에 문자열을 명령어로 해석하여 수행 = "echo 'Docker Volume Data!"을 출력하고, "/data/test.txt" 이 파일을 생성하여  내용을 입력
+na908158800@c3r1s4 ~ % docker exec test-container cat /data/test.txt   #"test-container" 내부에서 파일의 내용을 읽어서 출력
+Docker Volume Data!   #컨테이너 파일의 내용출력
 ```
 - 컨테이너 삭제
 ```
-na908158800@c3r1s4 ~ % docker rm -f test-container
+na908158800@c3r1s4 ~ % docker rm -f test-container   #컨테이너 강제삭제
 test-container
 ```
 - 같은 볼륨으로 새 컨테이너 실행
 ```
-na908158800@c3r1s4 ~ % docker run -d --name test-container2 \
-  -v my-volume:/data \
-  ubuntu sleep 1000
+na908158800@c3r1s4 ~ % docker run -d --name test-container2 \   #도커를 "test-container2"이름으로 명명하고, 실행하되
+  -v my-volume:/data \   #"my-volume"이름의 볼륨의 data경로에 연결
+  ubuntu sleep 1000   #우분투 1000초동안 대기하는 옵션으로
 180ff73331079dcb8c975fa1ed08a151cb3d63c9327aa82501e1e70a60ea7405
 ```
 - 데이터 확인 (컨테이너 삭제 후)
 ```
-na908158800@c3r1s4 ~ % docker exec test-container2 cat /data/test.txt
+na908158800@c3r1s4 ~ % docker exec test-container2 cat /data/test.txt   #"test-container2" 내부에서 파일의 내용을 읽어서 출력
 
-Docker Volume Data!
+Docker Volume Data!   #컨테이너 파일의 내용출력(컨테이너와 동일)
 ```
 <br>
 
