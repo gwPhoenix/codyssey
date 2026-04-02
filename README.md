@@ -102,7 +102,7 @@ Public
 file_copy.txt
 permission_test
 test_dir    #추가된 디렉토리
-na908158800@c3r1s4 ~ % touch file_txt   #파일 생성(내용 없음)
+na908158800@c3r1s4 ~ % touch empty_file.txt   #파일 생성(내용 없음)
 na908158800@c3r1s4 ~ % ls -la   #전체 파일 확인(숨김파일 포함)
 total 968
 drwxr-x---+ 25 na908158800  na908158800     800 Apr  1 11:12 .
@@ -127,18 +127,17 @@ drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
 drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
 drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
 -rw-r--r--   1 na908158800  na908158800       6 Mar 31 14:55 file_copy.txt
--rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt   #추가된 파일
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 empty_file.txt   #추가된 파일
 drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
 drwxr-xr-x   2 na908158800  na908158800      64 Apr  1 11:12 test_dir
 ```
 ```
-na908158800@c3r1s4 ~ % cat file.txt
-cat: file.txt: No such file or directory
-na908158800@c3r1s4 ~ % echo "Hello"> file.txt
-na908158800@c3r1s4 ~ % cat file.txt
-Hello
-na908158800@c3r1s4 ~ % cp file.txt file_copy.txt
-na908158800@c3r1s4 ~ % ls -la
+na908158800@c3r1s4 ~ % cat empty_file.txt   #방금 생성한 빈파일 내용 확인 ▶︎ 출력결과 없음
+na908158800@c3r1s4 ~ % echo "Hello"> empty_file.txt   #빈 파일에 내용 추가
+na908158800@c3r1s4 ~ % cat empty_file.txt   #내용 추가한 파일내용 확인
+Hello   #파일 내용 "Hello" 출력
+na908158800@c3r1s4 ~ % cp empty_file.txt file_copy.txt   #엠티파일 기준  "file_copy.txt"로 복사
+na908158800@c3r1s4 ~ % ls -la   #전체 파일 확인(숨김파일 포함)
 total 976
 drwxr-x---+ 26 na908158800  na908158800     832 Apr  1 11:15 .
 drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
@@ -161,18 +160,17 @@ drwx------+  3 na908158800  na908158800      96 Mar 31 08:59 Music
 drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
 drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
 drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
--rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:15 file.txt
--rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:17 file_copy.txt
--rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
+-rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:17 file_copy.txt   #추가된 복사파일
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 empty_file.txt
 drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
 drwxr-xr-x   2 na908158800  na908158800      64 Apr  1 11:12 test_dir
-na908158800@c3r1s4 ~ % mv renamed.txt ..
-mv: rename renamed.txt to ../renamed.txt: No such file or directory
-na908158800@c3r1s4 ~ % mv file.txt renamed.txt
-na908158800@c3r1s4 ~ % mv renamed.txt ..
-mv: rename renamed.txt to ../renamed.txt: Permission denied
-na908158800@c3r1s4 ~ % mv renamed.txt test_dir/
-na908158800@c3r1s4 ~ % ls -la
+```
+```
+na908158800@c3r1s4 ~ % mv empty_file.txt renamed.txt   #엠타파일 이름을 " rename.txt "로 변경
+na908158800@c3r1s4 ~ % mv renamed.txt ..   #현재 경로 기준 상위폴더로 이동
+mv: rename renamed.txt to ../renamed.txt: Permission denied   #상위폴더로 이동권한이 없음
+na908158800@c3r1s4 ~ % mv renamed.txt test_dir/   #test_dir 디렉토리에 파일이동
+na908158800@c3r1s4 ~ % ls -la   #전체 파일 확인(숨김파일 포함) ▶︎ 파일이 이동되어 목록에 없음
 total 968
 drwxr-x---+ 25 na908158800  na908158800     800 Apr  1 11:20 .
 drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
@@ -196,23 +194,24 @@ drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
 drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
 drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
 -rw-r--r--   1 na908158800  na908158800       6 Apr  1 11:17 file_copy.txt
--rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
 drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
 drwxr-xr-x   3 na908158800  na908158800      96 Apr  1 11:20 test_dir
-na908158800@c3r1s4 ~ % cd test_dir 
-na908158800@c3r1s4 test_dir % ls -la 
+na908158800@c3r1s4 ~ % cd test_dir   #해당 디렉토리로 이동
+na908158800@c3r1s4 test_dir % ls -la   #전체 파일 확인(숨김파일 포함)
 total 8
 drwxr-xr-x   3 na908158800  na908158800   96 Apr  1 11:20 .
 drwxr-x---+ 25 na908158800  na908158800  800 Apr  1 11:20 ..
--rw-r--r--   1 na908158800  na908158800    6 Apr  1 11:15 renamed.txt
-na908158800@c3r1s4 test_dir % rm renamed.txt
-na908158800@c3r1s4 test_dir % ls -la
+-rw-r--r--   1 na908158800  na908158800    6 Apr  1 11:15 renamed.txt   #이동된 파일
+na908158800@c3r1s4 test_dir % rm renamed.txt   #해당 파일 삭제
+na908158800@c3r1s4 test_dir % ls -la   #전체 파일 확인(숨김파일 포함) ▶︎ 파일 삭제되어 목록에 없음
 total 0
 drwxr-xr-x   2 na908158800  na908158800   64 Apr  1 11:22 .
 drwxr-x---+ 25 na908158800  na908158800  800 Apr  1 11:20 ..
-na908158800@c3r1s4 test_dir % cd ..
-na908158800@c3r1s4 ~ % rmdir test_dir
-na908158800@c3r1s4 ~ % ls
+```
+```
+na908158800@c3r1s4 test_dir % cd ..   #상위 폴더 디렉토리로 이동
+na908158800@c3r1s4 ~ % rmdir test_dir   # 해당 디렉토리 삭제
+na908158800@c3r1s4 ~ % ls   #폴더 목록 확인 ▶︎ 디렉토리 삭제되어 목록에 없음
 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
 Desktop
 Documents
