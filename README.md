@@ -47,7 +47,7 @@ git version 2.53.0
 Last login: Wed Apr  1 11:09:12 on ttys000
 na908158800@c3r1s4 ~ % pwd   #현재 경로 확인
 /Users/na908158800
-na908158800@c3r1s4 ~ % ls
+na908158800@c3r1s4 ~ % ls   #폴더 목록 확인
 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
 Desktop
 Documents
@@ -60,7 +60,7 @@ Pictures
 Public
 file_copy.txt
 permission_test
-na908158800@c3r1s4 ~ % ls -la
+na908158800@c3r1s4 ~ % ls -la   #전체 파일 확인(숨김파일 포함)
 total 968
 drwxr-x---+ 23 na908158800  na908158800     736 Apr  1 11:11 .
 drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
@@ -85,8 +85,10 @@ drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
 drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
 -rw-r--r--   1 na908158800  na908158800       6 Mar 31 14:55 file_copy.txt
 drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
-na908158800@c3r1s4 ~ % mkdir test_dir
-na908158800@c3r1s4 ~ % ls
+```
+```
+na908158800@c3r1s4 ~ % mkdir test_dir   #디렉토리 생성
+na908158800@c3r1s4 ~ % ls   #폴더 목록 확인
 571712656-43d9438a-2468-4a0f-8841-3516ab2dc998.png
 Desktop
 Documents
@@ -99,9 +101,9 @@ Pictures
 Public
 file_copy.txt
 permission_test
-test_dir
-na908158800@c3r1s4 ~ % touch file_txt
-na908158800@c3r1s4 ~ % ls -la
+test_dir    #추가된 디렉토리
+na908158800@c3r1s4 ~ % touch file_txt   #파일 생성(내용 없음)
+na908158800@c3r1s4 ~ % ls -la   #전체 파일 확인(숨김파일 포함)
 total 968
 drwxr-x---+ 25 na908158800  na908158800     800 Apr  1 11:12 .
 drwxr-xr-x   7 root         admin           224 Mar 31 08:59 ..
@@ -125,9 +127,11 @@ drwx------   4 na908158800  na908158800     160 Mar 31 10:41 OrbStack
 drwx------+  4 na908158800  na908158800     128 Mar 31 09:00 Pictures
 drwxr-xr-x+  4 na908158800  na908158800     128 Mar 31 08:59 Public
 -rw-r--r--   1 na908158800  na908158800       6 Mar 31 14:55 file_copy.txt
--rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt
+-rw-r--r--   1 na908158800  na908158800       0 Apr  1 11:12 file_txt   #추가된 파일
 drwxr-xr-x   4 na908158800  na908158800     128 Mar 31 17:08 permission_test
 drwxr-xr-x   2 na908158800  na908158800      64 Apr  1 11:12 test_dir
+```
+```
 na908158800@c3r1s4 ~ % cat file.txt
 cat: file.txt: No such file or directory
 na908158800@c3r1s4 ~ % echo "Hello"> file.txt
