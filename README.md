@@ -354,11 +354,11 @@ For more examples and ideas, visit:
 ```
 - Ubuntu 컨테이너 실행 및 내부 진입
 ```
-na908158800@c3r1s4 ~ % docker run -it ubuntu bash
-root@50eb7c1cbe60:/# ls
+na908158800@c3r1s4 ~ % docker run -it ubuntu   #우분투 내부 터미널 진입
+root@50eb7c1cbe60:/# ls   #디렉터리 목록 확인,컨테이너가 실행되지 않으면, 에러메시지 출력 
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
-root@50eb7c1cbe60:/# ls -la
+root@50eb7c1cbe60:/# ls -la # 자세한 목록 확인
 total 16
 drwxr-xr-x   1 root root   6 Apr  1 03:22 .
 drwxr-xr-x   1 root root   6 Apr  1 03:22 ..
@@ -382,18 +382,18 @@ dr-xr-xr-x  11 root root   0 Apr  1 03:22 sys
 drwxrwxrwt   1 root root   0 Feb 17 02:09 tmp
 drwxr-xr-x   1 root root  10 Feb 17 02:02 usr
 drwxr-xr-x   1 root root  90 Feb 17 02:09 var
-root@50eb7c1cbe60:/# pwd
+root@50eb7c1cbe60:/# pwd   #현재 경로 확인
 /
-root@50eb7c1cbe60:/# echo $HOME
+root@50eb7c1cbe60:/# echo $HOME   #환경변수 확인
 /root
-root@50eb7c1cbe60:/# uname -a
+root@50eb7c1cbe60:/# uname -a   #시스템정보 확인
 Linux 50eb7c1cbe60 6.17.8-orbstack-00308-g8f9c941121b1 #1 SMP PREEMPT Thu Nov 20 09:34:02 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
-root@50eb7c1cbe60:/# hostname
+root@50eb7c1cbe60:/# hostname   #호스트명 확인
 50eb7c1cbe60
-root@50eb7c1cbe60:/# echo "Hello from Docker Container"> test.txt
-root@50eb7c1cbe60:/# cat test.txt
-Hello from Docker Container
-root@50eb7c1cbe60:/# exit
+root@50eb7c1cbe60:/# echo "Hello from Docker Container"> test.txt   #"test.txt"에 "Hello from Docker Container" 내용 기록
+root@50eb7c1cbe60:/# cat test.txt   #파일 내용 확인
+Hello from Docker Container   #내용 출력
+root@50eb7c1cbe60:/# exit   #컨테이너의 터미널 종료
 exit
 ```
 - attach vs exec 차이 관찰
@@ -401,46 +401,34 @@ exit
   - exec : exit해도 컨테이너 유지, 실행중인 컨테이너에 새로운 프로세스 가능
 ```
 Last login: Wed Apr  1 12:50:17 on ttys000
-na908158800@c3r1s4 ~ % docker run -it -d --name my-ubuntu ubuntu bash
+na908158800@c3r1s4 ~ % docker run -it -d --name my-ubuntu ubuntu   #우분투를 "my-ubuntu"라는 이름으로 명명하고, 백그라운드 실행
 adb9b14afd51011a460b0102e5a7f0d037851eebae4cf31f8fb34634d5c68422
-na908158800@c3r1s4 ~ % docker attach my-ubuntu
-root@adb9b14afd51:/# ls
+na908158800@c3r1s4 ~ % docker attach my-ubuntu   #실행중인 "my-ubuntu" 컨테이너 터미널에 연결
+root@adb9b14afd51:/# ls   #디렉터리 목록 확인
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
-root@adb9b14afd51:/# echo "attach test"
-attach test
-root@adb9b14afd51:/# exit
+root@adb9b14afd51:/# echo "attach test"  #"attach test"를 화면에 출력
+attach test   #내용 출력
+root@adb9b14afd51:/# exit   #컨테이너의 터미널 종료
 exit
-na908158800@c3r1s4 ~ % docker exec -it my-ubuntu bash
-Error response from daemon: container adb9b14afd51011a460b0102e5a7f0d037851eebae4cf31f8fb34634d5c68422 is not running
-na908158800@c3r1s4 ~ % docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+``
 na908158800@c3r1s4 ~ % docker ps -a
 CONTAINER ID   IMAGE         COMMAND        CREATED             STATUS                           PORTS     NAMES
 adb9b14afd51   ubuntu        "bash"         4 minutes ago       Exited (0) 3 minutes ago                   my-ubuntu
-d39d00141b17   ubuntu        "bash"         14 minutes ago      Exited (0) 14 minutes ago                  test_ubuntu
-50eb7c1cbe60   ubuntu        "bash"         37 minutes ago      Exited (0) 34 minutes ago                  quirky_kepler
-9dbb17caec5a   hello-world   "/hello"       38 minutes ago      Exited (0) 38 minutes ago                  crazy_hawking
-692568505c42   hello-world   "/hello"       40 minutes ago      Exited (0) 40 minutes ago                  suspicious_ishizaka
-d7d84f80f253   ubuntu        "bash"         41 minutes ago      Exited (129) 40 minutes ago                wonderful_greider
-268a450df7d4   hello-world   "/hello"       46 minutes ago      Exited (0) 46 minutes ago                  eager_knuth
-4eb0bc6f3ff1   hello-world   "/hello"       47 minutes ago      Exited (0) 47 minutes ago                  dazzling_sinoussi
-4cb893e2d5c8   ubuntu        "sleep 1000"   About an hour ago   Exited (0) 58 minutes ago                  strange_wing
-57826daaccee   ubuntu        "sleep 1000"   About an hour ago   Exited (0) 59 minutes ago                  romantic_montalcini
-767cb24e58a3   ubuntu        "sleep 1000"   About an hour ago   Exited (137) About an hour ago             myapp
-na908158800@c3r1s4 ~ % docker start my-ubuntu
+na908158800@c3r1s4 ~ % docker start my-ubuntu   #중단된 "my-ubuntu" 컨테이너 실행
 my-ubuntu
-na908158800@c3r1s4 ~ % docker exec -it my-ubuntu bash
-root@adb9b14afd51:/# ls
+na908158800@c3r1s4 ~ % docker exec -it my-ubuntu bash   #"my-ubuntu" 터미널을 새롭게 실행해줘
+root@adb9b14afd51:/# ls   #디렉터리 목록 확인
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
-root@adb9b14afd51:/# echo "exec test"
-exec test
-root@adb9b14afd51:/# pwd
-/
-root@adb9b14afd51:/# exit
+root@adb9b14afd51:/# echo "exec test"   #"exec test"를 화면에 출력
+exec test   #내용 출력
+root@adb9b14afd51:/# exit   #컨테이너의 터미널 종료
 exit
-na908158800@c3r1s4 ~ % 
+na908158800@c3r1s4 ~ % docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED        STATUS              PORTS     NAMES
+adb9b14afd51   ubuntu    "bash"    10 minutes ago    Up About a minute             my-ubuntu   #컨테이너 여전히 구동중
 ```
 
 <br>
