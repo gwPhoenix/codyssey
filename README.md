@@ -465,10 +465,34 @@ na908158800@c3r1s4 html % cat index.html   #생성된 html파일 내용 확인
 ```
 - 빌드 & 실행
 
-
 ```
-
+Last login: Thu Apr  2 14:27:02 on ttys000
+na908158800@c3r1s4 ~ % cd Desktop   #바탕화면 경로로 이동
+na908158800@c3r1s4 Desktop % ls   #바탕화면의 " docker_image_custom " 폴더 확인
+Guide			codyssey		docker_image_custom
+na908158800@c3r1s4 Desktop % cd docker_image_custom   #"docker_image_custom" 폴더로 이동
+na908158800@c3r1s4 docker_image_custom % docker build -t my-custom-nginx:1.0 .   #1.0버전의 " my-custom-nginx " 이미지 이름을 부여하고 빌드시작
+[+] Building 2.6s (7/7) FINISHED                                docker:orbstack
+ => [internal] load build definition from Dockerfile                       0.1s
+ => => transferring dockerfile: 153B                                       0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest            1.5s
+ => [internal] load .dockerignore                                          0.1s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build context                                          0.2s
+ => => transferring context: 100B                                          0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:latest@sha256:7150b3a39203c  0.0s
+ => [2/2] COPY html/index.html /usr/share/nginx/html/index.html            0.1s
+ => exporting to image                                                     0.2s
+ => => exporting layers                                                    0.1s
+ => => writing image sha256:21d913def5062194c45433142408a6472e90d1981cfb0  0.0s
+ => => naming to docker.io/library/my-custom-nginx:1.0                     0.0s
+na908158800@c3r1s4 docker_image_custom % docker run -d -p 8080:80 --name my-nginx my-custom-nginx:1.0
+# 생성된 이미지를 백그라운드에서 " my-nginx " 이름으로 명명하고 실행
+a40ec1abd88f5e3761717211e2f2671ea0dc00f2f9b1f99f151d2a2995e4a050
 ```
+- 브라우저 접속하여 확인
+
+<img width="1860" height="272" alt="image" src="https://github.com/user-attachments/assets/ccdc9f37-3643-422a-a79d-166b164c0ad3" />
 
 <br>
 
