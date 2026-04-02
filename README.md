@@ -501,13 +501,58 @@ a40ec1abd88f5e3761717211e2f2671ea0dc00f2f9b1f99f151d2a2995e4a050
 
 [] 바인드 마운트 반영 + 볼륨 영속성
 Part1. Docker 볼륨 영속성 검증
-- Docker 볼륨 생성
+- Docker 볼륨 생성 & 확인
+```
+Last login: Thu Apr  2 15:45:47 on ttys000
+na908158800@c3r1s4 ~ % docker volume create my-volume
+my-volume
+na908158800@c3r1s4 ~ % docker volume ls
+DRIVER    VOLUME NAME
+local     my-volume
+na908158800@c3r1s4 ~ % docker volume inspect my-volume
+[
+    {
+        "CreatedAt": "2026-04-02T17:13:57+09:00",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/my-volume/_data",
+        "Name": "my-volume",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+```
 - 볼륨을 연결한 컨테이너 실행
-- 데이터 생성 (컨테이너 내부)
-- 데이터 확인 (컨테이너 삭제 전)
+```
+na908158800@c3r1s4 ~ % docker run -d --name test-container \
+  -v my-volume:/data \
+  ubuntu sleep 1000
+40079427800aaba2e657cfec8076f16a1ff0284fee6b17c162596284f2400667
+```
+- 데이터 생성 (컨테이너 내부) & 확인 확인 (컨테이너 삭제 전)
+```
+na908158800@c3r1s4 ~ % docker exec test-container bash -c "echo 'Docker Volume Data!' > /data/test.txt"
+na908158800@c3r1s4 ~ % docker exec test-container cat /data/test.txt
+Docker Volume Data!
+```
 - 컨테이너 삭제
+```
+na908158800@c3r1s4 ~ % docker rm -f test-container
+test-container
+```
 - 같은 볼륨으로 새 컨테이너 실행
+```
+na908158800@c3r1s4 ~ % docker run -d --name test-container2 \
+  -v my-volume:/data \
+  ubuntu sleep 1000
+180ff73331079dcb8c975fa1ed08a151cb3d63c9327aa82501e1e70a60ea7405
+```
 - 데이터 확인 (컨테이너 삭제 후)
+```
+na908158800@c3r1s4 ~ % docker exec test-container2 cat /data/test.txt
+
+Docker Volume Data!
+```
 <br>
 
 Part2.  바인드 마운트 실습
