@@ -245,7 +245,7 @@ drwx--xr-x  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 na908158800@c3r1s4 permission_test % chmod g+r test_file.txt   #파일의 그룹 : 읽기 권한 추가
 na908158800@c3r1s4 permission_test % ls -l test_file.txt   #파일 권한 확인
 -rw-r-----  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt   #그룹 : 읽기권한 추가됨(r--)
-na908158800@c3r1s4 permission_test % chmod 722 test_directory   #디렉토리의 권한 변경 - 소유자 : 4+2+1 = 모든권한, 그룹 : 2 = 쓰기만, 기타 : 2 = 쓰기만)
+na908158800@c3r1s4 permission_test % chmod 722 test_directory   #디렉토리의 권한 변경 - 소유자 : 모든권한, 그룹 : 쓰기만, 기타 : 쓰기만)
 na908158800@c3r1s4 permission_test % ls -ld test_directory   #디렉토리 권한 확인
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
