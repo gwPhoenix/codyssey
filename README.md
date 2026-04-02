@@ -441,7 +441,7 @@ na908158800@c3r1s4 Desktop % ls   #목록 확인
 Guide			codyssey		docker_image_custom
 na908158800@c3r1s4 Desktop % cd docker_image_custom   #해당 폴더로 이동
 na908158800@c3r1s4 docker_image_custom % cat > Dockerfile << 'EOF'   #도커파일 작성 시작, EOF가 추가로 나오면 마지막 부분
-heredoc> FROM nginx : latest   #NGINX 웹서버의 최신 버전을 베이스로 사용
+heredoc> FROM nginx:latest   #NGINX 웹서버의 최신 버전을 베이스로 사용
 heredoc> COPY html/index.html /usr/share/nginx/html/index.html
 #html/index.html 파일을 Docker 컨테이너의 /usr/share/nginx/html/ 폴더에 복사, NGINX가 웹페이지를 찾는 위치
 heredoc> EXPOSE 80   #웹의 기본포트인 80번을 외부에 공개
@@ -460,7 +460,7 @@ na908158800@c3r1s4 docker_image_custom % cat > html/index.html << 'EOF'   #HTML 
 heredoc> <h1> Hello Custom Image </h1>   #H1 태그 내용 추가
 heredoc> EOF
 na908158800@c3r1s4 docker_image_custom % cd html   #html 폴더로 이동
-na908158800@c3r1s4 html % cat index.html   생성된 html파일 내용 확인
+na908158800@c3r1s4 html % cat index.html   #생성된 html파일 내용 확인
 <h1> Hello Custom Image </h1>
 ```
 - 빌드 & 실행
