@@ -231,27 +231,22 @@ permission_test
 [x] 권한 확인 및 변경
 ```
 Last login: Wed Apr  1 11:11:25 on ttys000
-na908158800@c3r1s4 ~ % cd permission_test
-na908158800@c3r1s4 permission_test % ls -la
+na908158800@c3r1s4 ~ % cd permission_test   #해당 디렉토리 이동  
+na908158800@c3r1s4 permission_test % ls -la   #폴더와 파일 목록 확인 (숨김파일 포함, 상세내용)
 total 8
 drwxr-xr-x   4 na908158800  na908158800  128 Mar 31 17:08 .
 drwxr-x---+ 24 na908158800  na908158800  768 Apr  1 11:23 ..
 drwx--xr-x   3 na908158800  na908158800   96 Mar 31 17:09 test_directory
 -rw-------   1 na908158800  na908158800   20 Mar 31 17:08 test_file.txt
-na908158800@c3r1s4 permission_test % ls -l test_file.txt
+na908158800@c3r1s4 permission_test % ls -l test_file.txt   #파일 권한 확인
 -rw-------  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
-na908158800@c3r1s4 permission_test % ls -ld test_directory
+na908158800@c3r1s4 permission_test % ls -ld test_directory   #디렉토리 권한 확인
 drwx--xr-x  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
-na908158800@c3r1s4 permission_test % chomod g-r test_file.txt
-zsh: command not found: chomod
-na908158800@c3r1s4 permission_test % chmod g-r test_file.txt
-na908158800@c3r1s4 permission_test % ls -l test_file.txt 
--rw-------  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
-na908158800@c3r1s4 permission_test % chmod g+r test_file.txt
-na908158800@c3r1s4 permission_test % ls -l test_file.txt
--rw-r-----  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt
-na908158800@c3r1s4 permission_test % chmod 722 test_directory
-na908158800@c3r1s4 permission_test % ls -ld test_directory
+na908158800@c3r1s4 permission_test % chmod g+r test_file.txt   #파일의 그룹 : 읽기 권한 추가
+na908158800@c3r1s4 permission_test % ls -l test_file.txt   #파일 권한 확인
+-rw-r-----  1 na908158800  na908158800  20 Mar 31 17:08 test_file.txt   #그룹 : 읽기권한 추가됨(r--)
+na908158800@c3r1s4 permission_test % chmod 722 test_directory   #디렉토리의 권한 변경 - 소유자 : 4+2+1 = 모든권한, 그룹 : 2 = 쓰기만, 기타 : 2 = 쓰기만)
+na908158800@c3r1s4 permission_test % ls -ld test_directory   #디렉토리 권한 확인
 drwx-w--w-  3 na908158800  na908158800  96 Mar 31 17:09 test_directory
 ```
 
