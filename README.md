@@ -272,16 +272,17 @@ ubuntu       latest    f794f40ddfff   5 weeks ago   78.1MB   #다운로드된 �
 Last login: Thu Apr  2 11:17:20 on ttys000
 na908158800@c3r1s4 ~ % docker run -d --name test_log ubuntu \
 > sh -c "echo '컨테이너 동작중입니다';sleep 1000"
+# 우분투 컨테이너를 백그라운드에서 실행하는데, 이름을 "test_log"로 명명하고, 컨테이너 동작중입니다를 쉘 커맨드에 출력한 뒤 1000초동안 대기
 a491afaa915eeee51921044039cefc0467a6fdad2fe0de2db19f61934f529f26
-na908158800@c3r1s4 ~ % docker logs test_log
-컨테이너 동작중입니다
+na908158800@c3r1s4 ~ % docker logs test_log   #로그 확인
+컨테이너 동작중입니다   #로그 내용 출력
 na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
 a491afaa915e   ubuntu    "sh -c 'echo '컨테이…"   42 seconds ago   Up 42 seconds             test_log
-na908158800@c3r1s4 ~ % docker stop test_log
+na908158800@c3r1s4 ~ % docker stop test_log   #해당 컨테이너 중지
 test_log
-na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인 
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인 ▶︎ 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES   #중단되어 실행중인 컨테이너 없음
 ```
 ```
 Last login: Wed Apr  1 11:43:03 on ttys000
