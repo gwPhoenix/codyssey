@@ -466,8 +466,8 @@ COPY html/index.html /usr/share/nginx/html/index.html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
-- 빌드 & 실행
-
+- 빌드 & 실행 
+[x] 포트 매핑 & 브라우저 접속
 ```
 Last login: Thu Apr  2 14:27:02 on ttys000
 na908158800@c3r1s4 ~ % cd Desktop   #바탕화면 경로로 이동
@@ -496,24 +496,6 @@ a40ec1abd88f5e3761717211e2f2671ea0dc00f2f9b1f99f151d2a2995e4a050
 - 브라우저 접속하여 확인
 
 <img width="1860" height="272" alt="image" src="https://github.com/user-attachments/assets/ccdc9f37-3643-422a-a79d-166b164c0ad3" />
-
-<br>
-
-[x] 포트 매핑 & 브라우저 접속
-- Host Port: 8080
-- Container Port: 80
-- 접속 URL: http://localhost:8080
-```
-Last login: Wed Apr  1 15:26:36 on ttys000
-na908158800@c3r1s4 ~ % docker run -d -p 8080:80 my-web-app:1.0
-eb25fe9ffed84e066d22812565b1cbfff04b99a1f4643d76c93a4d7792ce93b6
-na908158800@c3r1s4 ~ % docker ps
-CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                     NAMES
-eb25fe9ffed8   my-web-app:1.0   "/docker-entrypoint.…"   13 seconds ago   Up 12 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   quirky_gauss
-adb9b14afd51   ubuntu           "bash"                   3 hours ago      Up 2 hours   
-```
-<img width="2020" height="284" alt="image" src="https://github.com/user-attachments/assets/8c3964d1-d700-4880-9594-35384ae507d6" />
-
 
 <br>
 
