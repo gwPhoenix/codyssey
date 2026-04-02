@@ -281,14 +281,14 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS       
 a491afaa915e   ubuntu    "sh -c 'echo '컨테이…"   42 seconds ago   Up 42 seconds             test_log
 na908158800@c3r1s4 ~ % docker stop test_log   #해당 컨테이너 중지
 test_log
-na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인 ▶︎ 
+na908158800@c3r1s4 ~ % docker ps   #실행중인 컨테이너만 확인
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES   #중단되어 실행중인 컨테이너 없음
 ```
 ```
 Last login: Wed Apr  1 11:43:03 on ttys000
-na908158800@c3r1s4 ~ % docker run -d ubuntu sleep 1000
+na908158800@c3r1s4 ~ % docker run -d ubuntu sleep 1000   #우분투 컨테이너를 백그라운드에서 실행하고, 1000초동안 대기
 4cb893e2d5c86fab460cd435763a6cef9bacadb489e87fded863acc3680ea450
-na908158800@c3r1s4 ~ % docekr stats
+na908158800@c3r1s4 ~ % docker stats   #리소스 사용량 확인
 
 
 CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS 
