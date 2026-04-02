@@ -223,7 +223,6 @@ OrbStack
 Pictures
 Public
 file_copy.txt
-file_txt
 permission_test
 ```
 
